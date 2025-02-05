@@ -1,0 +1,13 @@
+---
+applications:
+  - name: demoproject
+    path: dist
+    memory: 256M
+    instances: 1
+    buildpacks:
+      - nodejs_buildpack
+    env:
+      SAP_JWT_TRUST_ACL: '[{"clientid":"*","identityzone":"*"}]'
+    services:
+      - html5-apps-repo
+      - uaa_demoproject

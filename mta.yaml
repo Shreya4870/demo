@@ -1,10 +1,32 @@
 _schema-version: "3.2"
 ID: demoproject
-version: 0.0.1
-
+version: 0.0.2
+description: "An SAP Fiori/UI5 application."
 modules:
-  - name: demoproject
-    type: nodejs
-    path: webapp
+  - name: demoproject-app
+    type: html5
+    path: dist
     build-parameters:
-      builder: npm
+      builder: custom
+      commands:
+        - npm install
+        - ui5 build --clean-dest --dest dist
+      build-result: dist
+      ignore:
+        - "node_modules/"
+    requires:
+      - name: html5-apps-repo
+      - name: uaa_demoproject
+resources:
+  - name: html5-apps-repo
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: html5-apps-repo
+      service-plan: app-runtime
+
+  - name: uaa_demoproject
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      path: ./xs-security.json
