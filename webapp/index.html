@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo CAPTCHA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="captcha-container">
+        <h2>Please solve the CAPTCHA</h2>
+        <canvas id="captchaCanvas" width="200" height="50"></canvas>
+        <button onclick="generateCaptcha()">Refresh</button>
+        <input type="text" id="captchaInput" placeholder="Enter code" />
+        <button onclick="validateCaptcha()">Submit</button>
+        <p id="captchaMessage"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
