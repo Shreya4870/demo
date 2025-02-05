@@ -2,20 +2,5 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-    	<content>
-						<VBox class="captcha-container" alignItems="Center">
-    						<Text text="Please solve the CAPTCHA" class="captcha-heading"/>
-    
-    						<Text id="captchaText" class="captcha-text" text="ABC123"/>
-    
-    						<VBox class="captcha-box">
-    								<Button text="Refresh CAPTCHA" press="onGenerateCaptcha" class="refresh-btn"/>
-    						</VBox>
-    
-    						<Input id="captchaInput" placeholder="Enter the code" liveChange="onInputChange"/>
-    						<Button text="Submit" press="onValidateCaptcha" enabled="false" id="submitButton"/>
-    						<Text id="captchaMessage" class="captcha-message"/>
-						 </VBox>
-					</content>
     </Page>
 </mvc:View>
