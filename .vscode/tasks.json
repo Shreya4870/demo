@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "build.mta",
+			"label": "Build MTA: demoproject/mta.yaml",
+			"taskType": "Build",
+			"projectPath": "/home/user/projects/demoproject",
+			"extensions": [
+				"/home/user/projects/demoproject/.mtaext"
+			]
+		}
+	]
+}
